@@ -7,19 +7,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-//  mongodb Connection
- mongoose.connect('mongodb+srv://prajudharpure:prajakta@cluster0.vzgzz.mongodb.net/?retryWrites=true&w=majority',{
-     useNewUrlParser: true,
-     useUnifiedTopology: true
- },()=>{
-         console.log('Connected to mongodb');
+
+  mongoose.connect('process.env.MONGO_DB_URL',{
+      useNewUrlParser: true,
+      useUnifiedTopology: true 
+    },()=>{
+        console.log('Connected to mongodb');
  });
-//  mongoose.connect('process.env.MONGO_DB_URL',{
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// },()=>{
-//         console.log('Connected to mongodb');
-// });
 
 app.post('/add/plant', async (req, res) => {
   const plant = new Plant({
@@ -57,7 +51,7 @@ app.post('/delete/plant', async (req, res) => {
 });
 
 //Update Task
-app.post('/update/task', async (req, res) => {
+app.post('/update/plant', async (req, res) => {
     const plant = await Plant.updateOne({id : req.body.id},
         {$set : {name: req.body.name, description: req.body.description}
     });

@@ -27,6 +27,7 @@ function Dashboard() {
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a className="dropdown-item" href="./Addplant">Addplant</a></li>
+              <li><a className="dropdown-item" href="./Showplant">Showplant</a></li>
             </ul>
           </li>
           <li className="nav-item dropdown">
