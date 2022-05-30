@@ -1,7 +1,7 @@
-
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard/Dashboard";
-
+import Addplant from "./components/Addplant/Addplant";
 
 
 function App() {
@@ -10,7 +10,8 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
-    <Route path="/dashboard" element={<Dashboard/>} />
+    <Route path="/" element={<Dashboard/>} />
+    <Route path="/addplant" element={<Addplant/>} />
     </Routes>
     </BrowserRouter>
     </>

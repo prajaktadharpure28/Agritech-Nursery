@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import image from "./img/agri1.png";
 import img from "./img/agri2.jpeg";
-import indoorplant from "./img/indoorplant.PNG"
-import potsplanters from "./img/potsplanters.PNG"
-import soilmanure from "./img/soilmanure.PNG"
+import Addplant from "./img/indoorplant.PNG"
 // import {StyleSheet} from "react"
 function Dashboard() {
   return (
@@ -28,8 +26,7 @@ function Dashboard() {
               Plants
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a className="dropdown-item" href="#">Indoor Plants</a></li>
-              <li><a className="dropdown-item" href="#">Flowering Plants</a></li>
+              <li><a className="dropdown-item" href="./Addplant">Addplant</a></li>
             </ul>
           </li>
           <li className="nav-item dropdown">
@@ -71,14 +68,8 @@ function Dashboard() {
 <h1 className="text-center">We are here to inspire a world where every plant journey is a personal revolution of inner change and growth</h1>
 <br></br>
 <div className="text-center">
-<Link to="./Indoorplant">
-<img src={indoorplant} className="img-thumbnail" alt="..."></img>
-</Link>
-<Link to="./Indoorplant">
-<img src={potsplanters} className="img-thumbnail" alt="..."></img>
-</Link>
-<Link to="./Indoorplant">
-<img src={soilmanure} className="img-thumbnail" alt="..."></img>
+<Link to="./Addplant">
+<img src={Addplant} className="img-thumbnail" alt="..."></img>
 </Link>
 </div>
 </div>
