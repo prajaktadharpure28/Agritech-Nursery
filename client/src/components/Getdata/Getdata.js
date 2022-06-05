@@ -16,7 +16,7 @@ useEffect(() => {
   return (
     <div>
          <div className='container mt-4' >
-       <h1 className="text-center">Show Transaction</h1>
+       <h1 className="text-center">Show Plants</h1>
 
        <Link to={'/addplant'} class="btn btn-outline-success w-100"><b>ADD PLANTS</b></Link>
          {
