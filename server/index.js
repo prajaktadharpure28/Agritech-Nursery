@@ -4,16 +4,16 @@ const mongoose = require('mongoose');
 // const axios = require('axios');
 const Plant = require('./models/Plant')
 const app = express();
+require('dotenv').config()
 app.use(cors());
 app.use(express.json());
 
-
-  mongoose.connect('process.env.MONGO_DB_URL',{
-      useNewUrlParser: true,
-      useUnifiedTopology: true 
-    },()=>{
-        console.log('Connected to mongodb');
- });
+mongoose.connect(process.env.MONGODB_URI,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+},()=>{
+    console.log('MongoDB Connected...!');
+});
 
 app.post('/add/plant', async (req, res) => {
   const plant = new Plant({

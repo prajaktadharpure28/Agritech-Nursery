@@ -43,7 +43,7 @@ function Plant(){
               .then((res) => {
                 swal("Success!", "Plant Added successfully!", "success").then(
                   (value) => {
-                    navigate("/dashboard");
+                    navigate("/get/allplant");
                   }
                 );
               })
@@ -58,6 +58,7 @@ function Plant(){
     <div className='gradient'>
     <div className='container'>
         <div className='row'>
+          <div className='col-md-3'></div>
             <div className='col-md-6'>
             <div className='mt-2'>
                         <h2 className='card-title text-center'>Add Plant</h2>
