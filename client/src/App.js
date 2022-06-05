@@ -5,6 +5,7 @@ import Addplant from "./components/Addplant/Addplant";
 import Showplant from "./components/Showplant/Showplant";
 import Getdata from "./components/Getdata/Getdata";
 
+console.log(process.env.REACT_APP_API_KEY)
 function App() {
 
   return(
